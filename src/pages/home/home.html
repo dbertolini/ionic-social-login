@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <img src="{{ currentUser.photoURL }}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ currentUser.displayName }}
+        </ion-card-title>
+      <p>
+        {{ currentUser.email }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

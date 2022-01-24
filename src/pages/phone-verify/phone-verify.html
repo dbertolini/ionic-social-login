@@ -1,0 +1,16 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Phone verification</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-input [(ngModel)]="user.phoneVerifyCode" placeholder="Verification code"></ion-input>
+  <button block (click)="verify()" ion-button>
+    <ion-icon name="log-in">&nbsp;</ion-icon>
+    Verify
+  </button>
+</ion-content>

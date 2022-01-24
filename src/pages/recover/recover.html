@@ -1,0 +1,17 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Recover password</ion-title>
+    </ion-navbar>
+
+  </ion-header>
+
+  <ion-content padding>
+    <p>Por favor introduzca su correo electrónico asociado a la cuenta.</p>
+    <ion-item>
+      <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+      <ion-input type="email" [(ngModel)]="user.email" placeholder="Correo electrónico"></ion-input>
+    </ion-item>
+    <br>
+    <button (click)="changePass(user)" ion-button full>Recuperar</button>
+  </ion-content>

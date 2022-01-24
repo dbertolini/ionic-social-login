@@ -1,0 +1,19 @@
+<ion-menu [content]="content">
+    <ion-content>
+      <div id="content">
+        <div id="profile-info">
+          <img id="profile-image" src="{{user.photoURL}}">
+          <h3 id="profile-name">{{user.displayName}}</h3>
+          <span id="profile-description">{{user.email}}</span>
+        </div>
+      </div>
+      <hr>
+      <ion-list>
+          <button color="danger" block ion-button (click)="logout()" menuClose><ion-icon name="exit">&nbsp;</ion-icon>Logout</button>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

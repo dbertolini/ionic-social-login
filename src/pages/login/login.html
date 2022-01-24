@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <button ion-button block color="danger" (click)="googleLogin()">
+    <ion-icon name="logo-google">&nbsp;</ion-icon>
+    Login with Google
+  </button>
+
+  <button ion-button block color="possitive" (click)="facebookLogin()">
+    <ion-icon name="logo-facebook">&nbsp;</ion-icon>
+    Login with Facebook
+  </button>
+  <hr/>
+  <hr/>
+  <ion-list>
+    <ion-item>
+      <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+      <ion-input type="email" [(ngModel)]="user.email" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon name="lock"></ion-icon></ion-label>
+      <ion-input type="password" [(ngModel)]="user.password" placeholder="Password"></ion-input>
+    </ion-item>
+    <br>
+    <button block (click)="emailLogin(user)" ion-button>
+      <ion-icon name="log-in">&nbsp;</ion-icon>
+      Login with email
+    </button>
+    <br>
+    <hr/>
+    <button block (click)="emailRecover()" ion-button>Recover</button>
+    <button block (click)="emailRegister()" ion-button>Register</button>
+  </ion-list>
+  <hr/>
+  <hr/>
+  <ion-list>
+    <ion-item>
+      <ion-label><ion-icon name="phone"></ion-icon></ion-label>
+      <ion-input [(ngModel)]="user.phone" placeholder="Phone number"></ion-input>
+    </ion-item>
+    <div id="recaptcha-container"></div>
+    <!-- <div id="phone-sign-in-recaptcha"></div> -->
+    <br>
+    <button block (click)="phoneLogin(user)" ion-button>
+      <ion-icon name="log-in">&nbsp;</ion-icon>
+      Login with phone
+    </button>
+  </ion-list>
+  <hr/>
+  <hr/>
+</ion-content>
